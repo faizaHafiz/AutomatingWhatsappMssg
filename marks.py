@@ -10,7 +10,7 @@ import csv
 import time
 import os
 
-def element_presence(by, xpath, time):
+def element_presence(by, xpath, time): #locating the chatbox
     element_present = EC.presence_of_element_located((By.XPATH, xpath))
     WebDriverWait(driver, time).until(element_present)
 def send_message(url):
@@ -26,7 +26,7 @@ chrome_options.add_argument("--user-data-dir-Session")
 chrome_options.add_argument("--profile-directory=Default")
 
 PATH = "D:\chromedriver_win32\chromedriver.exe"
-driver = webdriver.Chrome(PATH,options=chrome_options)
+driver = webdriver.Chrome(PATH,options=chrome_options) #opening web browser for automating 
 
 rows=[]
 base_url = 'https://web.whatsapp.com/send?phone={}&text={}'
@@ -35,7 +35,7 @@ with open("marks.csv",'r') as file:
     header = next(csvreader)
     for row in csvreader:
         rows.append(row)
-for i in range(0,len(rows)):
+for i in range(0,len(rows)): #calling for every record in excel
     mssg = """-------{}'s Score-------
     Marks in physics:{}
     Marks in chemistry:{}
