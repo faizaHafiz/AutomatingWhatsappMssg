@@ -1,5 +1,6 @@
 # AutomatingWhatsappMssg
 
+Automates sending personalised whatsapp messages by extracting numbers and data from an excel sheet 
 Implemented from the article - https://medium.com/@jihargifari/how-to-send-multiple-whatsapp-message-using-python-3f1f19c5976b
 with few changes in code
 
